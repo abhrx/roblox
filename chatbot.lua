@@ -103,62 +103,81 @@ G2L["a"] = Instance.new("UICorner", G2L["9"]);
 G2L["a"]["CornerRadius"] = UDim.new(1, 0);
 
 
+-- StarterGui.chatbotNotice.backGround.Content.Close.LocalScript
+G2L["b"] = Instance.new("LocalScript", G2L["9"]);
+
+
+
 -- StarterGui.chatbotNotice.backGround.shadowHolder
-G2L["b"] = Instance.new("Frame", G2L["2"]);
-G2L["b"]["ZIndex"] = 0;
-G2L["b"]["Size"] = UDim2.new(1.02014, 0, 1.19308, 0);
-G2L["b"]["Position"] = UDim2.new(-0.00725, 0, -0.1496, 0);
-G2L["b"]["Name"] = [[shadowHolder]];
-G2L["b"]["BackgroundTransparency"] = 1;
+G2L["c"] = Instance.new("Frame", G2L["2"]);
+G2L["c"]["ZIndex"] = 0;
+G2L["c"]["Size"] = UDim2.new(1.02014, 0, 1.19308, 0);
+G2L["c"]["Position"] = UDim2.new(-0.00725, 0, -0.1496, 0);
+G2L["c"]["Name"] = [[shadowHolder]];
+G2L["c"]["BackgroundTransparency"] = 1;
 
 
 -- StarterGui.chatbotNotice.backGround.shadowHolder.umbraShadow
-G2L["c"] = Instance.new("ImageLabel", G2L["b"]);
-G2L["c"]["ZIndex"] = 0;
-G2L["c"]["SliceCenter"] = Rect.new(10, 10, 118, 118);
-G2L["c"]["ScaleType"] = Enum.ScaleType.Slice;
-G2L["c"]["ImageTransparency"] = 0.86;
--- [ERROR] cannot convert ImageContent, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
-G2L["c"]["ImageColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["c"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["c"]["Image"] = [[rbxassetid://1316045217]];
-G2L["c"]["Size"] = UDim2.new(1, 4, 1, 4);
-G2L["c"]["BackgroundTransparency"] = 1;
-G2L["c"]["Name"] = [[umbraShadow]];
-G2L["c"]["Position"] = UDim2.new(0.5, 0, 0.5, 2);
-
-
--- StarterGui.chatbotNotice.backGround.shadowHolder.penumbraShadow
-G2L["d"] = Instance.new("ImageLabel", G2L["b"]);
+G2L["d"] = Instance.new("ImageLabel", G2L["c"]);
 G2L["d"]["ZIndex"] = 0;
 G2L["d"]["SliceCenter"] = Rect.new(10, 10, 118, 118);
 G2L["d"]["ScaleType"] = Enum.ScaleType.Slice;
-G2L["d"]["ImageTransparency"] = 0.88;
+G2L["d"]["ImageTransparency"] = 0.86;
 -- [ERROR] cannot convert ImageContent, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
 G2L["d"]["ImageColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["d"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
 G2L["d"]["Image"] = [[rbxassetid://1316045217]];
 G2L["d"]["Size"] = UDim2.new(1, 4, 1, 4);
 G2L["d"]["BackgroundTransparency"] = 1;
-G2L["d"]["Name"] = [[penumbraShadow]];
+G2L["d"]["Name"] = [[umbraShadow]];
 G2L["d"]["Position"] = UDim2.new(0.5, 0, 0.5, 2);
 
 
--- StarterGui.chatbotNotice.backGround.shadowHolder.ambientShadow
-G2L["e"] = Instance.new("ImageLabel", G2L["b"]);
+-- StarterGui.chatbotNotice.backGround.shadowHolder.penumbraShadow
+G2L["e"] = Instance.new("ImageLabel", G2L["c"]);
 G2L["e"]["ZIndex"] = 0;
 G2L["e"]["SliceCenter"] = Rect.new(10, 10, 118, 118);
 G2L["e"]["ScaleType"] = Enum.ScaleType.Slice;
-G2L["e"]["ImageTransparency"] = 0.48;
+G2L["e"]["ImageTransparency"] = 0.88;
 -- [ERROR] cannot convert ImageContent, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
 G2L["e"]["ImageColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["e"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
 G2L["e"]["Image"] = [[rbxassetid://1316045217]];
 G2L["e"]["Size"] = UDim2.new(1, 4, 1, 4);
 G2L["e"]["BackgroundTransparency"] = 1;
-G2L["e"]["Name"] = [[ambientShadow]];
+G2L["e"]["Name"] = [[penumbraShadow]];
 G2L["e"]["Position"] = UDim2.new(0.5, 0, 0.5, 2);
 
 
+-- StarterGui.chatbotNotice.backGround.shadowHolder.ambientShadow
+G2L["f"] = Instance.new("ImageLabel", G2L["c"]);
+G2L["f"]["ZIndex"] = 0;
+G2L["f"]["SliceCenter"] = Rect.new(10, 10, 118, 118);
+G2L["f"]["ScaleType"] = Enum.ScaleType.Slice;
+G2L["f"]["ImageTransparency"] = 0.48;
+-- [ERROR] cannot convert ImageContent, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
+G2L["f"]["ImageColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["f"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["f"]["Image"] = [[rbxassetid://1316045217]];
+G2L["f"]["Size"] = UDim2.new(1, 4, 1, 4);
+G2L["f"]["BackgroundTransparency"] = 1;
+G2L["f"]["Name"] = [[ambientShadow]];
+G2L["f"]["Position"] = UDim2.new(0.5, 0, 0.5, 2);
+
+
+-- StarterGui.chatbotNotice.backGround.Content.Close.LocalScript
+local function C_b()
+local script = G2L["b"];
+	local closeBtn = script.Parent
+	local gui = closeBtn.Parent.Parent.Parent
+	
+	closeBtn.MouseButton1Click:Connect(function()
+		for i, d in gui:GetDescendants() do
+			if d ~= script then d:Destroy() end
+			gui:Destroy()
+		end
+	end)
+end;
+task.spawn(C_b);
 
 return G2L["1"], require;
